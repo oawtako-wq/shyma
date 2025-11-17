@@ -1,69 +1,125 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>التعليم أساس التقدم</title>
+
 <style>
-body {
-    font-family: Arial;
-    background-color:white;
+  body {
+    font-family: Arial, sans-serif;
+    background-color: white;
     direction: rtl;
+  }
+
+  h1 {
     text-align: center;
-}
+    color: darkblue;
+  }
 
-#main-title {
-    color: chocolate;
-    background-color: white;
-    padding: 10px;
-}
+  table {
+    width: 50%;
+   text-align: center;
+    border-collapse: collapse;
+    background-color:pink;
+  }
 
-.sub-title {
-    color: green;
-    background-color: white;
+  td {
+    padding: 8px;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  select,
+  textarea {
+    width: 95%;
     padding: 5px;
-    margin-top: 15px;
-}
+    border: 1px solid #ccc;
+  }
 
-p {
-    color: rgb(25, 39, 193); /* هنا جعلنا النصوص باللون الأخضر */
-    font-size: 16px;
-}
+  textarea {
+    resize: vertical;
+  }
 
+  .buttons {
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  input[type="submit"],
+  input[type="reset"] {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 6px 14px;
+    margin: 5px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover,
+  input[type="reset"]:hover {
+    background-color: gray;
+  }
 </style>
 </head>
 <body>
 
-<h1 id="main-title">التعليم أساس التقدم</h1>
+<h1>نموذج تسجيل البيانات</h1>
 
-<h2 class="sub-title">أهمية التعليم</h2>
-<p>التعليم هو الطريق لبناء جيل واعٍ ومبدع.</p>
+<form>
+  <table>
+    <tr>
+      <td><label for="name">الاسم:</label></td>
+      <td><input type="text" id="name" name="name"></td>
+    </tr>
 
-<h2 class="sub-title">المدرسة</h2>
-<p>مكان يكتسب فيه الطالب المعرفة والمهارات.</p>
+    <tr>
+      <td><label for="password">كلمة المرور:</label></td>
+      <td><input type="password" id="password" name="password"></td>
+    </tr>
 
-<h2 class="sub-title">المعلم</h2>
-<p>هو الموجه والقدوة في طريق العلم.</p>
+    <tr>
+      <td><label>الجنس:</label></td>
+      <td>
+        <input type="radio" id="male" name="gender" value="ذكر"> <label for="male">ذكر</label>
+        <input type="radio" id="female" name="gender" value="أنثى"> <label for="female">أنثى</label>
+      </td>
+    </tr>
 
-<h2 class="sub-title">الطالب</h2>
-<p>هو محور العملية التعليمية وبناء المستقبل.</p>
+    <tr>
+      <td><label for="degree">المؤهل:</label></td>
+      <td>
+        <select id="degree" name="degree">
+          <option>ثانوي</option>
+          <option>دبلوم</option>
+          <option>بكالوريوس</option>
+        </select>
+      </td>
+    </tr>
 
-<h2 class="sub-title">القراءة</h2>
-<p>تزيد من الثقافة وتفتح آفاقاً جديدة.</p>
+    <tr>
+      <td><label>الهوايات:</label></td>
+      <td>
+        <input type="checkbox" id="writer" name="hobby" value="كاتب"> <label for="writer">كاتب</label>
+        <input type="checkbox" id="artist" name="hobby" value="رسام"> <label for="artist">رسام</label>
+      </td>
+    </tr>
 
-<h2 class="sub-title">الممارسة</h2>
-<p>تعزز الفهم وتحوّل المعرفة إلى مهارة.</p>
+    <tr>
+      <td><label for="notes">ملاحظات:</label></td>
+      <td><textarea id="notes" name="notes"></textarea></td>
+    </tr>
 
-<h2 class="sub-title">الوقت</h2>
-<p>تنظيم الوقت يساعد على النجاح.</p>
-
-<h2 class="sub-title">التعاون</h2>
-<p>العمل الجماعي يطور مهارات التواصل.</p>
-
-<h2 class="sub-title">التكنولوجيا</h2>
-<p>تسهل الوصول إلى المعلومات بسرعة.</p>
-
-<h2 class="sub-title">المثابرة</h2>
-<p>الاجتهاد المستمر هو سر التفوق.</p>
+    <tr>
+      <td colspan="2" class="buttons">
+        <input type="submit" value="إرسال">
+        <input type="reset" value="مسح">
+      </td>
+    </tr>
+  </table>
+</form>
 
 </body>
 </html>
